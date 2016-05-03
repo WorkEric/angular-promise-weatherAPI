@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="mainApp">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularJS Plunker</title>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <link rel="stylesheet" href="style.css" />
+    <script data-require="angular.js@1.4.x" 
+      src="https://code.angularjs.org/1.4.9/angular.js" data-semver="1.4.9"></script>
+    <script src="app.js"></script>
+    <script src="controllers.js"></script>
+    <script src="services.js"></script>
+  </head>
+
+  <body ng-controller="WeatherController">
+    City:
+    <input type="text" ng-model="city" placeholder="Enter city name here"/>
+    <input type="text" ng-model="country" placeholder="Enter country name here"/>
+    <button ng-click="getWeather()">Get Weather</button>
+    <br/>
+    <br/>
+    <b>Weather condition:</b><span>{{weatherDescription}}</span>
+  </body>
+
+</html>
